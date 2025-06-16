@@ -1,0 +1,59 @@
+body {
+  background-image: url('doodle.png');
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: normal;
+  font-size: 36px;
+  margin-top: 30px;
+}
+
+.color-picker {
+	width:1000px;
+	height:50px;
+	background-color: #D4E9FF;
+	margin:auto;
+    margin-top: 5px;
+	border-radius:20px;
+}
+
+#canvas {
+  width: 1000px;
+  height: 800px;
+  background-color: white;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.color {
+  width: 35px;
+  height: 35px;
+  margin: 3px;
+  margin-top: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.box {
+  width: 19px;
+  height: 19px;
+  display: inline-block;
+  border: 1px solid lightgray;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  background-color: black;
+  color: gold;
+  border-radius: 20px
+}
+
+#selected {
+  margin-right: 10px;
+  border-radius: 5px;
+  border-color: black;
+}

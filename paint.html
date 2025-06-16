@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Painting</title>
+        <link rel='stylesheet' href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>My Canvas</h1>
+
+        <div class = "color-picker">
+          <div class = "color" id = "selected" style = "background-color: saddlebrown;"></div>
+          <div class = "color" style = "background-color: saddlebrown" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: darkred;" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: firebrick;" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #E43318" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: rgb(205, 72, 27);" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: rgb(242, 131, 58);" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: goldenrod" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: rgb(242, 212, 58);" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #BFF23A" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #48B417" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #1AB087" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #1793AF" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #0B74C4" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #220BC4" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #4A33DC" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #5B0BC4" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #F38CDF" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #000000" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: darkgray;" onclick = "changeColor(this);"></div>
+          <div class = "color" style = "background-color: #FFFFFF" onclick = "changeColor(this);"></div>
+        </div>
+      <button onclick = "clearCanvas()"> Clear Canvas </button>
+      
+        <div id="canvas">
+          
+        </div>
+      <script>
+        var canvas = document.getElementById("canvas");
+        function addBoxes() {
+          for(var boxcount = 0; boxcount < 2009; boxcount = boxcount + 1) {
+            canvas.innerHTML += "<div class = 'box' onclick = 'fillBox(this);'></div>"
+          }
+        }
+        var selectedColor = "saddlebrown"
+        function fillBox(box) {
+          box.style.backgroundColor = selectedColor;
+          box.style.borderColor = selectedColor;
+        }
+        function clearCanvas() {
+          canvas.innerHTML = ""
+          addBoxes();
+        }
+        function changeColor(colorBox) {
+          selectedColor = colorBox.style.backgroundColor
+          var displayBox = document.getElementById('selected');
+          displayBox.style.backgroundColor = selectedColor;
+        }
+        addBoxes();
+      </script>
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
